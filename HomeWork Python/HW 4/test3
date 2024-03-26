@@ -1,0 +1,60 @@
+# Task 10: Multiply all elements in a dictionary
+def multiply_dictionary_elements(dictionary):
+    result = 1
+    for value in dictionary.values():
+        result *= value
+    return result
+
+# Task 11: Remove a key from a dictionary
+def remove_key_from_dictionary(dictionary, key):
+    if key in dictionary:
+        del dictionary[key]
+
+# Task 12: Remove duplicates from a dictionary
+def remove_duplicates_from_dictionary(dictionary):
+    new_dict = {}
+    for key, value in dictionary.items():
+        if value not in new_dict.values():
+            new_dict[key] = value
+    return new_dict
+
+# Task 13: Sort a list alphabetically into a dictionary
+def sort_list_into_dictionary(lst):
+    sorted_lst = sorted(lst)
+    dictionary = {}
+    for i, value in enumerate(sorted_lst):
+        dictionary[i] = value
+    return dictionary
+
+# Task 14: Add an element to a tuple
+def add_element_to_tuple(tup, element):
+    return tup + (element,)
+
+# Task 15: Convert a tuple into a string
+def convert_tuple_to_string(tup):
+    return ''.join(tup)
+
+# Task 16: Find repeated elements in a tuple
+def find_repeated_elements_in_tuple(tup):
+    repeated_elements = []
+    for item in set(tup):
+        if tup.count(item) > 1:
+            repeated_elements.append(item)
+    return repeated_elements
+
+# Task 17: Remove an element from a tuple
+def remove_element_from_tuple(tup, element):
+    new_tuple = tuple(item for item in tup if item != element)
+    return new_tuple
+
+# Task 18: Convert a tuple into a dictionary
+def convert_tuple_to_dictionary(tup):
+    return {i: tup[i] for i in range(len(tup))}
+
+# Task 19: Reverse a tuple
+def reverse_tuple(tup):
+    return tup[::-1]
+
+# Task 20: Convert a given list of strings into a tuple
+def convert_list_to_tuple(lst):
+    return tuple(lst)
